@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: register-manager-authorization
+  jackson:
+    default-property-inclusion: non_null
+  output:
+    ansi:
+      enabled: ALWAYS
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      #ddl-auto: none
+    properties:
+      hibernate.format_sql: true
+  test:
+    enabled: false
+
+
+springdoc:
+  override-with-generic-response: false

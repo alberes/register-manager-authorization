@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://postgresdb:5432/register_manager}
+    username: ${DATASOURCE_USERNAME:postgres}
+    password: ${DATASOURCE_PASSWORD:postgres}
+  jpa:
+    show-sql: ${SHOW_SQL:true}
+    hibernate:
+      ddl-auto: ${DDL_AUTO:update}
+      #ddl-auto: none
+    properties:
+      hibernate.format_sql: ${FORMAT_SQL:true}
+
+server:
+  port: ${APP_PORT:8081}
+
+management:
+  server:
+    port: ${MONITORING_PORT:9090}
+  endpoints:
+    web:
+      exposure:
+        include: ${MONITORING_LIST:'*'}
+logging:
+  file:
+    name: ${LOG_NAME:register-manager.log}
+  level:
+    root: ${LOG_LEVEL:warn}
+#Trace, debug, info, warn, error
+
+app:
+  session:
+    expirationtime: ${EXPIRATION_TIME:30}
+
+viacep:
+  url:  ${VIA_CEP_URL:https://viacep.com.br/ws/}

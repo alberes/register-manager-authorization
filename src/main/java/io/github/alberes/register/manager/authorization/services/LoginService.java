@@ -4,7 +4,6 @@ import io.github.alberes.register.manager.authorization.constants.Constants;
 import io.github.alberes.register.manager.authorization.controllers.dto.LoginDto;
 import io.github.alberes.register.manager.authorization.controllers.dto.TokenDto;
 import io.github.alberes.register.manager.authorization.domains.UserAccount;
-import io.github.alberes.register.manager.authorization.repositories.UserAccountRepository;
 import io.github.alberes.register.manager.authorization.services.exceptions.AuthorizationException;
 import io.github.alberes.register.manager.authorization.utils.ControllerUtils;
 import lombok.RequiredArgsConstructor;
@@ -12,11 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

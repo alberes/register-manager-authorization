@@ -1,6 +1,5 @@
 package io.github.alberes.register.manager.authorization.domains;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
